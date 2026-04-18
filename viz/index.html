@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<title>Magic Tower DQN Replay</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+  <h1>Magic Tower &middot; DQN Trajectory Replay</h1>
+  <section class="stats">
+    <div class="stat"><span class="label">HP</span><div class="bar"><div id="hpFill" class="fill hp"></div></div><span id="hpVal" class="val"></span></div>
+    <div class="stat"><span class="label">DEF</span><span id="defVal" class="big"></span></div>
+    <div class="stat"><span class="label">$</span><span id="moneyVal" class="big"></span></div>
+    <div class="stat"><span class="label">KILLED</span><span id="killedVal" class="big"></span></div>
+  </section>
+  <section class="monsters" id="monsters"></section>
+  <section class="step-info">
+    <div>Step <span id="stepIdx">0</span> / <span id="stepTotal">0</span></div>
+    <div>Action: <span id="actionLabel">-</span></div>
+    <div>Reward: <span id="rewardLabel">-</span></div>
+    <div>Total reward: <span id="totalReward">0.00</span></div>
+  </section>
+  <section class="controls">
+    <button id="resetBtn">Reset</button>
+    <button id="prevBtn">Prev</button>
+    <button id="playBtn">Play</button>
+    <button id="nextBtn">Next</button>
+    <label>Speed
+      <select id="speedSel">
+        <option value="1200">0.5x</option>
+        <option value="600" selected>1x</option>
+        <option value="300">2x</option>
+        <option value="120">5x</option>
+      </select>
+    </label>
+  </section>
+  <section class="log">
+    <h2>Action log</h2>
+    <ol id="actionLog"></ol>
+  </section>
+</main>
+<script src="viz.js"></script>
+</body>
+</html>

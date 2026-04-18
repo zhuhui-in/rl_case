@@ -1,0 +1,6 @@
+dist
+__pycache__/
+*.pyc
+checkpoints/
+logs/
+viz/trajectory.json
